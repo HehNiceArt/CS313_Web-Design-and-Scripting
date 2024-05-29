@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang = "en">
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css.css">
+</head>
+<body>
+	<div style="text-align:center">
+		<h1>Activity Quiz Lab</h1>
+		<h3>QUIRANTE ANDREI DOMINIC B.</h3>
+	</div>
+
+	<div style="text-align:center">
+		<p id="sideA"></p>
+		<p id="sideB"></p>
+		<p id="sideC"></p>
+		<br>
+		<p id="triangleRes"></p>
+
+		<!--QUIRANTE ANDREI DOMINIC B. -->	
+		
+		<script>
+			let sideA = Number(prompt ("Side A", ""));
+			console.log('Side A: ' + sideA);
+			let sideB = Number(prompt ("Side B", ""));
+			console.log('Side B: ' + sideB);
+			let sideC = Number(prompt ("Side C", ""));
+			console.log('Side C: ' + sideC);
+		
+		function triangleCalculation(sideA, sideB, sideC){
+				//perimeter
+				var p = (sideA + sideB + sideC);
+				console.log('Perimeter: ' + p);
+				// s = semi perimeter
+				var s = p / 2;
+				console.log('Semi Perimeter: ' + s);
+				var area = Math.sqrt(s * (s - sideA) * (s - sideB) * (s - sideC));
+				console.log('Area: ' + area);
+				return area;
+		}
+
+		document.getElementById("sideA").innerHTML = 'Side A: '+ sideA;
+		document.getElementById("sideB").innerHTML = 'Side B: '+ sideB;
+		document.getElementById("sideC").innerHTML = 'Side C: '+ sideC;
+		let result = "The area of the trangle is " + parseFloat(triangleCalculation(sideA, sideB, sideC)).toFixed(2);
+		Number(result);
+		document.getElementById("triangleRes").innerHTML = result;
+
+		</script>
+	</div>
+</body>
+</html>
